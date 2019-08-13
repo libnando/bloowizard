@@ -19,7 +19,7 @@ Example:
     <meta charset="utf-8">    
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" type="text/css" href="bloowizard.css">
-    <title>BlooWizar</title>    
+    <title>BlooWizard</title>    
 </head>
 
 <body>
