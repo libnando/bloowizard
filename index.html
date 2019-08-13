@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">    
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="bloowizard.css">
+    <title>BlooWizar</title>    
+</head>
+
+<body>
+
+    <div style="padding:30px;">
+        
+        <div id="myCuteWizard" class="bloowizard">
+            
+            <div class="bloo-head">
+                <ul>
+                    <li><a href="javascript:;" class="bloo-action-step step-current"> 1 - Lorem </a></li>
+                    <li><a href="javascript:;" class="bloo-action-step"> 2 - Ipsum </a></li>
+                    <li><a href="javascript:;" class="bloo-action-step"> 3 - Dolor </a></li>
+                    <li><a href="javascript:;" class="bloo-action-step"> 4 - Eiusmod </a></li>
+                    <li><a href="javascript:;" class="bloo-action-step"> 5 - Cupidatat </a></li>
+                </ul>
+            </div>
+
+            <div class="bloo-body">
+                <div class="bloo-content-step step-current">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <div class="bloo-content-step">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    <br />
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                </div>
+                <div class="bloo-content-step">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <div class="bloo-content-step">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <div class="bloo-content-step">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit o/
+                </div>
+            </div>
+            
+            <button class="bloo-action-step bloo-finish">Finish!</button>
+            <button class="bloo-action-step bloo-next"> &nbsp; > &nbsp; </button>
+            <button class="bloo-action-step bloo-prev"> &nbsp; < &nbsp;</button>            
+
+        </div>
+
+    </div>
+
+    <script src="bloowizard.js"></script>
+
+    <script>
+
+        const meuWizard = new BlooWizard("myCuteWizard");
+
+        meuWizard.on.beforeNext(function(wzd){ 
+            console.log(wzd);            
+        });
+
+        meuWizard.on.finish(function(wzd){ 
+            console.log(wzd);
+            alert("finish!!"); 
+        });
+
+        meuWizard.on.change(function(wzd){ 
+            console.log(wzd.currentStep);
+        });
+
+    </script>
+
+</body>
+
+</html>
