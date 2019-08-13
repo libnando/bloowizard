@@ -94,16 +94,11 @@ Example:
 #### Triggers
 
 <table width="100%" style="text-align: center;">
-  <thead>
-    <tr>
-      <td>Method</td>      
-    </tr>
-  </thead>
   <tbody>
     <tr><td>stop()</td></tr>
     <tr><td>continue()</td></tr>
     <tr><td>next()</td></tr>
     <tr><td>prev()</td></tr>
-    <tr><td>runTo()</td></tr>
+    <tr><td>runTo(step)</td></tr>
   </tbody>
 </table>
